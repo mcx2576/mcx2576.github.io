@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Cecilia's Wonderland</title>
+        <title>Decision trees, can we make it easier?</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Cecilia's Wonderland Atom Feed" />
 </head>
@@ -16,13 +16,18 @@
                 <nav><ul>
                     <li><a href="/pages/about.html">About</a></li>
                     <li><a href="/category/misc.html">misc</a></li>
-                    <li><a href="/category/supervised-methods.html">Supervised methods</a></li>
+                    <li class="active"><a href="/category/supervised-methods.html">Supervised methods</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/decision-trees-can-we-make-it-easier.html" rel="bookmark"
+           title="Permalink to Decision trees, can we make it easier?">Decision trees, can we make it easier?</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/decision-trees-can-we-make-it-easier.html">Decision trees, can we make it easier?</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-05-23T00:00:00+02:00">
                 Published: Sat 23 May 2020
@@ -33,7 +38,7 @@
         </address>
 <p>In <a href="/category/supervised-methods.html">Supervised methods</a>.</p>
 <p>tags: <a href="/tag/machine-learning.html">Machine Learning</a> <a href="/tag/classical-methods.html">Classical methods</a> <a href="/tag/supervised-learning.html">Supervised Learning</a> </p>
-</footer><!-- /.post-info --><p>translation Is: false
+</footer><!-- /.post-info -->      <p>translation Is: false
 status: draft</p>
 <h1>What are decision trees?</h1>
 <p>Decision trees are tree structured algorithms which map the input feature variables to a specific target. The algorithm is implemented with tree-structure, where at each node is a decision point and the end-nodes will be equipped with right and left leaves. The target variable could be discrete or continuous, which results in the classification trees and regression trees.</p>
@@ -58,37 +63,11 @@ Therefore, in order to win this game, you should estimate the probability of eac
 <strong>ID3:</strong> ID3 mainly uses <strong>entropy</strong> to measure the information gain by each split. The entropy could be calculated by the entropy gain $-t_ilog_2(t_i)$ across all classes (t_i includes the class t_1, t_2, t_3...).
 <strong>CART:</strong> Classification and regression trees are most classic decision tree algorithms. their calculation are also pretty intuitive. For <strong>Classification</strong>, the model uses <strong>Gini index</strong> to measure the impurity of each node. <strong>Gini index</strong> is calculated by aggregate the frequency calculation of each class, $-f_i(1-f_i)$. Where f_I is the frequency of i class appearing in the specific node. The higher the  <strong>Gini index</strong>, the higher the homogeneity  for the specific tree.
 <strong>Regression</strong>, on the other hand, uses a totally different impurity measures to calculate the impurity-variance. In general, variance is calculated by $1/NSUM^N_{I=1}(y_i-\mu)^2$, where $y_I$ is the label of that instance while $\mu$ is the mean of labels (1/NSUM^N_{I=1}y_i).
-__CHAID:__CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by $\sqrt{(Actual_observation-Expected_observation)^2/expected_observation}$. It could be used for both classification and regression trees.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+__CHAID:__CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by $\sqrt{(Actual_observation-Expected_observation)^2/expected_observation}$. It could be used for both classification and regression trees.</p>
+    </div><!-- /.entry-content -->
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/say-hello-world.html" rel="bookmark"
-                           title="Permalink to Say Hello World!">Say Hello World!</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-05-18T00:00:00+02:00">
-                Published: Mon 18 May 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/cecilia-miao.html">Cecilia Miao</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
-
-</footer><!-- /.post-info -->                <p>2020 is a tough year for everyone!
-During the spring festival, I came across the Corona crisis in China. When I came back to Europe, I was advised to quarantine for two weeks. Then it explodes in The Netherlands in mid May, which forces me to stay at home till …</p>
-                <a class="readmore" href="/say-hello-world.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
