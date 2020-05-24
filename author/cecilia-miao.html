@@ -15,14 +15,68 @@
                 <h1><a href="/">Cecilia's Wonderland</a></h1>
                 <nav><ul>
                     <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="/category/misc.html">misc</a></li>
-                    <li><a href="/category/supervised-methods.html">Supervised methods</a></li>
+                    <li><a href="/category/drifting-mind.html">Drifting mind</a></li>
+                    <li><a href="/category/machine-learning.html">Machine Learning</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/say-hello-world.html">Say Hello World!</a></h1>
+                    <h1 class="entry-title"><a href="/decision-trees-can-we-make-it-easier.html">Decision trees, can we make it easier?</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-05-23T00:00:00+02:00">
+                Published: Sat 23 May 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/cecilia-miao.html">Cecilia Miao</a>
+        </address>
+<p>In <a href="/category/machine-learning.html">Machine Learning</a>.</p>
+<p>tags: <a href="/tag/machine-learning.html">Machine Learning</a> <a href="/tag/classical-methods.html">Classical methods</a> <a href="/tag/supervised-learning.html">Supervised Learning</a> </p>
+</footer><!-- /.post-info --><p>translation Is: false
+status: draft</p>
+<h1>What are decision trees?</h1>
+<p>Decision trees are tree structured algorithms which map the input feature variables to a specific target. The algorithm is implemented with tree-structure, where at each node is a decision point and the end-nodes will be equipped with right and left leaves. The target variable could be discrete or continuous, which results in the classification trees and regression trees.</p>
+<hr>
+<h1>Explain decision trees to a child</h1>
+<h2>The decision part</h2>
+<p>imagining that you are playing the monopoly game. You need to make a lot of decisions during this process, for instance, at the beginning of the game, you need to decide whether you should spend the money to buy more assets or spend it to upgrade your house. Based on each of the decision that you made, you could encounter more subsequent decisions. In the end, you would be directed to the result of winning or losing the game.
+Therefore, in order to win this game, you should estimate the probability of each decision leading to the final results or wining and losing the game. After you played a lot of games, you could gradually learn to make the best decision that could lead to your triumph, this process is called parameter updates.</p>
+<h2>The tree part</h2>
+<p>Probably you could be tired of playing so many games. it will be great if there is a robot that could help you to automatically play the game. How can we tell the computer to calculate all results and make the right decision for us? if we draw this process on a blank paper, you could probability observe this kind of representation.</p>
+<p>Look at the picture, if you rotate it a little bit, doesn't it just look like a normal tree. Basically, it has the root since the beginning of the game, branch for each decision point, and leaf for the ending results. We could represent it with a specific computer data structure-tree in order to solve it. The computer could use that data structure to compute all results and update the probability of choosing the left or right branch for you, Then you could easily win this game.</p>
+<hr>
+<h1>Technical details</h1>
+<p>Above-mentioned explanations could already be sufficient to explain to a child about what decision trees look like. However, since we are enthusiastic machine learning practitioners, we would like to more technical details. For instance, based on what criteria does the tree split, what's the difference between a classification tree and regression trees, are there any variations in different decision trees?</p>
+<h2>Decision tree algorithms</h2>
+<p>..<em> ID3 (Iterative Dichotomiser 3)
+..</em> CART (Classification And Regression Tree)
+..* Chi-square automatic interaction detection (CHAID)</p>
+<p>These algorithms differentiate with each other mainly based on different <strong>impurity</strong> measures. </p>
+<h3>mpurity</h3>
+<p>impurity measures the homogeneity of the labels of that node. if a node has only one label, we would say its impurity is 0.</p>
+<h3>Information gain</h3>
+<p>Information gain is the difference between the parent node impurity and the weighted sum of the two child node impurities. The</p>
+<h3>ID3</h3>
+<p>ID3 mainly uses <strong>entropy</strong> to measure the information gain by each split. The entropy could be calculated by the entropy gain $-t_ilog_2(t_i)$ across all classes (t_i includes the class t_1, t_2, t_3...).</p>
+<h3>CART</h3>
+<p>Classification and regression trees are most classic decision tree algorithms. their calculation are also pretty intuitive. For <strong>Classification</strong>, the model uses <strong>Gini index</strong> to measure the impurity of each node. <strong>Gini index</strong> is calculated by aggregate the frequency calculation of each class, $-f_i(1-f_i)$. Where f_I is the frequency of i class appearing in the specific node. The higher the  <strong>Gini index</strong>, the higher the homogeneity  for the specific tree.
+<strong>Regression</strong>, on the other hand, uses a totally different impurity measures to calculate the impurity-variance. In general, variance is calculated by $1/NSUM^N_{I=1}(y_i-\mu)^2$, where $y_I$ is the label of that instance while $\mu$ is the mean of labels (1/NSUM^N_{I=1}y_i).</p>
+<h3>CHAID</h3>
+<p>CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by $\sqrt{(Actual_observation-Expected_observation)^2/expected_observation}$. It could be used for both classification and regression trees.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/say-hello-world.html" rel="bookmark"
+                           title="Permalink to Say Hello World!">Say Hello World!</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-05-18T00:00:00+02:00">
                 Published: Mon 18 May 2020
@@ -31,15 +85,15 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/cecilia-miao.html">Cecilia Miao</a>
         </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>In <a href="/category/drifting-mind.html">Drifting mind</a>.</p>
 
-</footer><!-- /.post-info --><p>2020 is a tough year for everyone!
-During the spring festival, I came across the Corona crisis in China. When I came back to Europe, I was advised to quarantine for two weeks. Then it explodes in The Netherlands in mid May, which forces me to stay at home till now.</p>
-<p>With the infinite quarantine period, I have been through the vicious cycle of encountering sth fresh -&gt; being afraid of being infected -&gt; trying everything new -&gt; Getting bored of everything. I experienced with cooking, baking, playing the piano and farming. Sometimes time flies so fast that I didn't realize that I haven been trapped for three months in total.</p>
-<p>I hope that the world could come back to normal soon, though I know the "normal" could never be the life we used to have anyway. The Economics published an article claiming the globalization is dead, while I am more concerned about the fact that I might not be able to travel to different places and experience various lifestyles. At least I could use my blog to voice out what I am thinking about to the world.</p>
-<p>Say Hello World!</p>
-<p>Cecilia</p>                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                <p>2020 is a tough year for everyone!
+During the spring festival, I came across the Corona crisis in China. When I came back to Europe, I was advised to quarantine for two weeks. Then it explodes in The Netherlands in mid May, which forces me to stay at home till …</p>
+                <a class="readmore" href="/say-hello-world.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
