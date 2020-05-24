@@ -1,6 +1,8 @@
 title: Say Hello World!
 date: 18/05/2020
 author: Cecilia Miao
+keywords: 2020
+category: Drifting mind
 
 2020 is a tough year for everyone!
 During the spring festival, I came across the Corona crisis in China. When I came back to Europe, I was advised to quarantine for two weeks. Then it explodes in The Netherlands in mid May, which forces me to stay at home till now.
