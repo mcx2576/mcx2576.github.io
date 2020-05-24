@@ -27,12 +27,12 @@ ___
 Above-mentioned explanations could already be sufficient to explain to a child about what decision trees look like. However, since we are enthusiastic machine learning practitioners, we would like to more technical details. For instance, based on what criteria does the tree split, what's the difference between a classification tree and regression trees, are there any variations in different decision trees?
 
 ## Decision tree algorithms
-..* ID3 (Iterative Dichotomiser 3)
-..* CART (Classification And Regression Tree)
-..* Chi-square automatic interaction detection (CHAID)
+1. ID3 (Iterative Dichotomiser 3)
+2. CART (Classification And Regression Tree)
+3. Chi-square automatic interaction detection (CHAID)
 
 These algorithms differentiate with each other mainly based on different __impurity__ measures. 
-### mpurity
+### impurity
 impurity measures the homogeneity of the labels of that node. if a node has only one label, we would say its impurity is 0.
 ### Information gain
 Information gain is the difference between the parent node impurity and the weighted sum of the two child node impurities. The
@@ -40,6 +40,6 @@ Information gain is the difference between the parent node impurity and the weig
 ID3 mainly uses **entropy** to measure the information gain by each split. The entropy could be calculated by the entropy gain $-t_ilog_2(t_i)$ across all classes (t_i includes the class t_1, t_2, t_3...).
 ### CART 
 Classification and regression trees are most classic decision tree algorithms. their calculation are also pretty intuitive. For **Classification**, the model uses **Gini index** to measure the impurity of each node. **Gini index** is calculated by aggregate the frequency calculation of each class, $-f_i(1-f_i)$. Where f_I is the frequency of i class appearing in the specific node. The higher the  **Gini index**, the higher the homogeneity  for the specific tree.
-**Regression**, on the other hand, uses a totally different impurity measures to calculate the impurity-variance. In general, variance is calculated by $1/NSUM^N_{I=1}(y_i-\mu)^2$, where $y_I$ is the label of that instance while $\mu$ is the mean of labels (1/NSUM^N_{I=1}y_i).
+**Regression**, on the other hand, uses a totally different impurity measures to calculate the impurity-variance. In general, variance is calculated by $\frac{1}{N}\sum^N_{i=1}(y_i-\mu)^2$, where $y_I$ is the label of that instance while $\mu$ is the mean of labels ($\frac{1}{N}\SUM^N_{i=1}y_i$).
 ### CHAID
-CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by $\sqrt{(Actual_observation-Expected_observation)^2/expected_observation}$. It could be used for both classification and regression trees.
+CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by $\sqrt{\frac{(ActualObservation-ExpectedObservation)^2}{ExpectedObservation}}$. It could be used for both classification and regression trees.

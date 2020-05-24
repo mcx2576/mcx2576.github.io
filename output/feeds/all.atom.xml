@@ -15,21 +15,85 @@ Therefore, in order to win this game, you should estimate the probability of eac
 &lt;h1&gt;Technical details&lt;/h1&gt;
 &lt;p&gt;Above-mentioned explanations could already be sufficient to explain to a child about what decision trees look like. However, since we are enthusiastic machine learning practitioners, we would like to more technical details. For instance, based on what criteria does the tree split, what's the difference between a classification tree and regression trees, are there any variations in different decision trees?&lt;/p&gt;
 &lt;h2&gt;Decision tree algorithms&lt;/h2&gt;
-&lt;p&gt;..&lt;em&gt; ID3 (Iterative Dichotomiser 3)
-..&lt;/em&gt; CART (Classification And Regression Tree)
-..* Chi-square automatic interaction detection (CHAID)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ID3 (Iterative Dichotomiser 3)&lt;/li&gt;
+&lt;li&gt;CART (Classification And Regression Tree)&lt;/li&gt;
+&lt;li&gt;Chi-square automatic interaction detection (CHAID)&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;These algorithms differentiate with each other mainly based on different &lt;strong&gt;impurity&lt;/strong&gt; measures. &lt;/p&gt;
-&lt;h3&gt;mpurity&lt;/h3&gt;
+&lt;h3&gt;impurity&lt;/h3&gt;
 &lt;p&gt;impurity measures the homogeneity of the labels of that node. if a node has only one label, we would say its impurity is 0.&lt;/p&gt;
 &lt;h3&gt;Information gain&lt;/h3&gt;
 &lt;p&gt;Information gain is the difference between the parent node impurity and the weighted sum of the two child node impurities. The&lt;/p&gt;
 &lt;h3&gt;ID3&lt;/h3&gt;
-&lt;p&gt;ID3 mainly uses &lt;strong&gt;entropy&lt;/strong&gt; to measure the information gain by each split. The entropy could be calculated by the entropy gain $-t_ilog_2(t_i)$ across all classes (t_i includes the class t_1, t_2, t_3...).&lt;/p&gt;
+&lt;p&gt;ID3 mainly uses &lt;strong&gt;entropy&lt;/strong&gt; to measure the information gain by each split. The entropy could be calculated by the entropy gain &lt;span class="math"&gt;\(-t_ilog_2(t_i)\)&lt;/span&gt; across all classes (t_i includes the class t_1, t_2, t_3...).&lt;/p&gt;
 &lt;h3&gt;CART&lt;/h3&gt;
-&lt;p&gt;Classification and regression trees are most classic decision tree algorithms. their calculation are also pretty intuitive. For &lt;strong&gt;Classification&lt;/strong&gt;, the model uses &lt;strong&gt;Gini index&lt;/strong&gt; to measure the impurity of each node. &lt;strong&gt;Gini index&lt;/strong&gt; is calculated by aggregate the frequency calculation of each class, $-f_i(1-f_i)$. Where f_I is the frequency of i class appearing in the specific node. The higher the  &lt;strong&gt;Gini index&lt;/strong&gt;, the higher the homogeneity  for the specific tree.
-&lt;strong&gt;Regression&lt;/strong&gt;, on the other hand, uses a totally different impurity measures to calculate the impurity-variance. In general, variance is calculated by $1/NSUM^N_{I=1}(y_i-\mu)^2$, where $y_I$ is the label of that instance while $\mu$ is the mean of labels (1/NSUM^N_{I=1}y_i).&lt;/p&gt;
+&lt;p&gt;Classification and regression trees are most classic decision tree algorithms. their calculation are also pretty intuitive. For &lt;strong&gt;Classification&lt;/strong&gt;, the model uses &lt;strong&gt;Gini index&lt;/strong&gt; to measure the impurity of each node. &lt;strong&gt;Gini index&lt;/strong&gt; is calculated by aggregate the frequency calculation of each class, &lt;span class="math"&gt;\(-f_i(1-f_i)\)&lt;/span&gt;. Where f_I is the frequency of i class appearing in the specific node. The higher the  &lt;strong&gt;Gini index&lt;/strong&gt;, the higher the homogeneity  for the specific tree.
+&lt;strong&gt;Regression&lt;/strong&gt;, on the other hand, uses a totally different impurity measures to calculate the impurity-variance. In general, variance is calculated by &lt;span class="math"&gt;\(\frac{1}{N}\sum^N_{i=1}(y_i-\mu)^2\)&lt;/span&gt;, where &lt;span class="math"&gt;\(y_I\)&lt;/span&gt; is the label of that instance while &lt;span class="math"&gt;\(\mu\)&lt;/span&gt; is the mean of labels (&lt;span class="math"&gt;\(\frac{1}{N}\SUM^N_{i=1}y_i\)&lt;/span&gt;).&lt;/p&gt;
 &lt;h3&gt;CHAID&lt;/h3&gt;
-&lt;p&gt;CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by $\sqrt{(Actual_observation-Expected_observation)^2/expected_observation}$. It could be used for both classification and regression trees.&lt;/p&gt;</content><category term="Machine Learning"></category><category term="Machine Learning"></category><category term="Classical methods"></category><category term="Supervised Learning"></category></entry><entry><title>Say Hello World!</title><link href="/say-hello-world.html" rel="alternate"></link><published>2020-05-18T00:00:00+02:00</published><updated>2020-05-18T00:00:00+02:00</updated><author><name>Cecilia Miao</name></author><id>tag:None,2020-05-18:/say-hello-world.html</id><summary type="html">&lt;p&gt;2020 is a tough year for everyone!
+&lt;p&gt;CHAID uses chi-square to measure impurity. The higher the chi-square value, the higher the statistical significance between sub-node and parent node. Chi-square value in statistics is always calculated by &lt;span class="math"&gt;\(\sqrt{\frac{(ActualObservation-ExpectedObservation)^2}{ExpectedObservation}}\)&lt;/span&gt;. It could be used for both classification and regression trees.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Machine Learning"></category><category term="Machine Learning"></category><category term="Classical methods"></category><category term="Supervised Learning"></category></entry><entry><title>Say Hello World!</title><link href="/say-hello-world.html" rel="alternate"></link><published>2020-05-18T00:00:00+02:00</published><updated>2020-05-18T00:00:00+02:00</updated><author><name>Cecilia Miao</name></author><id>tag:None,2020-05-18:/say-hello-world.html</id><summary type="html">&lt;p&gt;2020 is a tough year for everyone!
 During the spring festival, I came across the Corona crisis in China. When I came back to Europe, I was advised to quarantine for two weeks. Then it explodes in The Netherlands in mid May, which forces me to stay at home till …&lt;/p&gt;</summary><content type="html">&lt;p&gt;2020 is a tough year for everyone!
 During the spring festival, I came across the Corona crisis in China. When I came back to Europe, I was advised to quarantine for two weeks. Then it explodes in The Netherlands in mid May, which forces me to stay at home till now.&lt;/p&gt;
 &lt;p&gt;With the infinite quarantine period, I have been through the vicious cycle of encountering sth fresh -&amp;gt; being afraid of being infected -&amp;gt; trying everything new -&amp;gt; Getting bored of everything. I experienced with cooking, baking, playing the piano and farming. Sometimes time flies so fast that I didn't realize that I haven been trapped for three months in total.&lt;/p&gt;
