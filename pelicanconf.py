@@ -22,14 +22,18 @@ AUTHOR_FEED_RSS = None
 
 GITHUB_URL = 'http://github.com/mcx2576s'
 
+# Add the search function
+DIRECT_TEMPLATES = ('index', 'categories', 'authors','archives', 'search')
 
 # Social widget
 SOCIAL = (('github', 'http://github.com/mcx2576'),
         ('facebook', 'https://www.facebook.com/mcx2576'),)
 
 DEFAULT_PAGINATION = False
-
+BOOTSTRAP_THEME = 'sketchy'
 PLUGIN_PATHS = ['./plugins/pelican-plugins']
-PLUGINS = ['i18n_subsites','render_math']
+PLUGINS = ['i18n_subsites','render_math','tipue_search.tipue_search']
+DISQUS_DISPLAY_COUNTS = True
+DISQUS_NO_ID = True
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
