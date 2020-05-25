@@ -32,8 +32,8 @@ SOCIAL = (('github', 'http://github.com/mcx2576'),
 DEFAULT_PAGINATION = False
 BOOTSTRAP_THEME = 'sketchy'
 PLUGIN_PATHS = ['./plugins/pelican-plugins']
-PLUGINS = ['i18n_subsites','render_math','tipue_search.tipue_search']
-DISQUS_DISPLAY_COUNTS = True
-DISQUS_NO_ID = True
+PLUGINS = ['i18n_subsites','render_math']
+# DISQUS_DISPLAY_COUNTS = True
+# DISQUS_NO_ID = True
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
