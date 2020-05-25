@@ -167,7 +167,7 @@ Therefore, in order to win this game, you should estimate the probability of eac
  In the regression case, <span class="math">\(f_k\)</span> linearly transforms <span class="math">\(\vec{x_i}\)</span> and outputs a continuous value <span class="math">\(\hat{y_i}\)</span>. Subsequently, <span class="math">\(l(y_i, \hat{y_i})\)</span> is obtained by minimum square loss (MSE) for i-th instance. </p>
 <p>Random Forest differs from the decision tree with the bagging process, which performs sampling with replacement with the training dataset. In this way, each tree is trained with different training sets, which makes it de-correlate with the other tree. The bootstrap sampling also grows a deeper tree, which further reduces the model class variance, but potentially leads to the problem of higher bias/overfitting. In addition to the bootstrap sampling, random forest adopts the "feature bagging" training procedure that selects a random subset of the features at each candidate split. "feature bagging" allows fewer predictors for the response variable have an equal chance to be selected in trees compared to strong predictors, further decreasing the variance of predictions from the model. </p>
 <blockquote>
-<p>__Bootstrap__refers to the process that you sample dataset with replacements. In other words, a small sub-dataset will never get trained during this proces. They will be called as the out-of-sample instances.</p>
+<p><strong>Bootstrap</strong> refers to the process that you sample dataset with replacements. In other words, a small sub-dataset will never get trained during this proces. They will be called as the out-of-sample instances.</p>
 </blockquote>
 <p>## Boosting trees
  Similar to Random Forest, Boosted trees  is also a CART where the output class/value depends on the individual tree within the ensembles model. The main difference between the Boosted model and the Random Forest is the training/optimization process. After the loss function is defined for the tree ensembles model, it is optimized based on traditional gradient descent. However, it is intractable to learn all trees at one time. Friedman proposed the Gradient Boosting concept, where the model applies the additive strategy to learn the model parameters. Chen implements this concept with the XGBoost software. </p>
@@ -183,7 +183,7 @@ Therefore, in order to win this game, you should estimate the probability of eac
 <p>
  Here <span class="math">\(f_1(x_i), f_2(x_i)\ldots f_t(x_i)\)</span> are added tree models that minimize the loss function. In the regression case, <span class="math">\(f_t(x_i)\)</span> will be the model that minimizes residuals. Schapire explicitly demonstrates the benefits of using the 'boosting' strategy in addition to the 'bagging' operation. 'Boosting' reduces the bias of the model by gradually adding more learners (trees) into the current model, re-modeling the bias and residuals within the current CART and combine all learners with the different weights to obtain the final model.</p>
 <blockquote>
-<p>s __Bagging__aggregates the trained weak learners and generate the predicted results. It can used for reducing variance which helps avoid overfitting.</p>
+<p><strong>Bagging</strong>aggregates the trained weak learners and generate the predicted results. It can used for reducing variance which helps avoid overfitting.</p>
 </blockquote>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
