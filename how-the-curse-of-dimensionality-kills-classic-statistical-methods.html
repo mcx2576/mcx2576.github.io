@@ -21,7 +21,7 @@
         <meta property="og:url" content="/how-the-curse-of-dimensionality-kills-classic-statistical-methods.html"/>
         <meta property="og:description" content="What is the curse of dimensionality and how does it happen in the classic machine learning models?"/>
         <meta property="article:published_time" content="2020-05-24" />
-            <meta property="article:section" content="Machine Learning, Deep Learning" />
+            <meta property="article:section" content="Machine Learning" />
             <meta property="article:tag" content="Machine Learning" />
             <meta property="article:tag" content="Statistical Inferences" />
             <meta property="article:author" content="Cecilia Miao" />
@@ -29,7 +29,7 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.sketchy.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/native.css" rel="stylesheet">
@@ -38,8 +38,8 @@
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Cecilia's Wonderland ATOM Feed"/>
 
-        <link href="/feeds/machine-learning-deep-learning.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Cecilia's Wonderland Machine Learning, Deep Learning ATOM Feed"/>
+        <link href="/feeds/machine-learning.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Cecilia's Wonderland Machine Learning ATOM Feed"/>
 </head>
 <body>
 
@@ -63,11 +63,8 @@ Cecilia's Wonderland            </a>
                         <li >
                             <a href="/category/drifting-mind.html">Drifting mind</a>
                         </li>
-                        <li >
-                            <a href="/category/machine-learning.html">Machine learning</a>
-                        </li>
                         <li class="active">
-                            <a href="/category/machine-learning-deep-learning.html">Machine learning, deep learning</a>
+                            <a href="/category/machine-learning.html">Machine learning</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -115,16 +112,14 @@ Cecilia's Wonderland            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>translation Is: false
-status: draft</p>
-<h1>The curse of dimensionality</h1>
+                <h1>The curse of dimensionality</h1>
 <p>The curse of dimensionality indicates the phenomenon that as the input parameters of a model increase, the volume of the spaces increases exponentially that the existing data becomes sparse. Inevitably, <strong>Statistical Inference</strong> methods lose their power under this situation.</p>
 <blockquote>
 <p><em>Example:</em> Assuming you that are a kid, we always play the game "rock, paper, scissors".  If we want to predict the probability of wining the game based on past gaming experiences with our friend Alex, then we need to gather some data to predict the probability of him to take a certain move. Then, when some other friends Carlotta, John and Linda join the game, the prediction becomes harder and harder, as we need to not only predict the conditional probability of our serves, but their conditional probabilities and joint probabilities. In the end, we need to play far more rounds in order to win this game.</p>
 </blockquote>
 <h1>The 'cure' for this issue</h1>
 <h2>PCA</h2>
-<p>Some methods such as <strong>PCA</strong>(principle component analysis)  could help the feature engineering process by decreasing the number of attributes without excluding significant factors within the model. </p>
+<p>Some methods such as <strong>PCA</strong> (principle component analysis)  could help the feature engineering process by decreasing the number of attributes without excluding significant factors within the model. </p>
 <blockquote>
 <p><em>Example:</em> If you are a fan of music, there must be a type of music that makes you happy the most. The style of the music could be decided by different features, the chords, the rhythm, the melody and the strength of the music, etc. These features  might <strong>jointly</strong> decide the style of the music, which means that you can't easily decide the style just by one or two individual features. However, some features might be redundant to decide a style of music, like the specific node in a music piece, this information is already cover in chords, or correlated with other keys. How do we smartly decide important features to use for avoiding the <strong>curse of dimensionality</strong> and effectively deciding a specific style of music.
 The PCA could be calculated with the following procedure.
@@ -139,6 +134,7 @@ So, what does each of the step mean to a layman?</p>
 <h3>Find the eigen vectors of the matrix</h3>
 <p><strong>Eigen vector</strong> could be regarded as the coordinate mapping of all feature points in the feature space, so that the sum of square distance of original points are minimized after the mapping. How do we preserve the difference between different features at the same time? Eigen vector also has the property of maximizing the variance of a dataset. So that we know some major features such as rhythm, melody and strength will be represented by those eigen vectors. The <strong>minimum square error</strong> and the <strong>maximum variance</strong> will be achieved at the same time in PCA.</p>
 <h3>Rank eigen vectors based on eigen values</h3>
+<p>After we obtain the eigen vectors, we calculated eigen values and rank eigen vectors according to eigen values.</p>
 <h3>Choose the most important eigen vectors as our feature vectors.</h3>
 <p>After you choose the eigen vectors, you can use them for further predictions or analysis.</p>
             </div>

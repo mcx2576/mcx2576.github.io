@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Machine Learning, Deep Learning - Cecilia's Wonderland</title>
+    <title>Search - Cecilia's Wonderland
+</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,8 +11,7 @@
 
 
 
-    <meta name="author" content="Cecilia Miao" />
-    <meta name="keywords" content="Machine Learning, Deep Learning" />
+        <meta name="author" content="Cecilia Miao" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Cecilia's Wonderland" />
@@ -23,7 +23,7 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.sketchy.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/native.css" rel="stylesheet">
@@ -32,8 +32,7 @@
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Cecilia's Wonderland ATOM Feed"/>
 
-        <link href="/feeds/machine-learning-deep-learning.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Cecilia's Wonderland Machine Learning, Deep Learning ATOM Feed"/>
+
 </head>
 <body>
 
@@ -60,9 +59,6 @@ Cecilia's Wonderland            </a>
                         <li >
                             <a href="/category/machine-learning.html">Machine learning</a>
                         </li>
-                        <li class="active">
-                            <a href="/category/machine-learning-deep-learning.html">Machine learning, deep learning</a>
-                        </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -78,14 +74,7 @@ Cecilia's Wonderland            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a href="/how-the-curse-of-dimensionality-kills-classic-statistical-methods.html">How the curse of dimensionality kills classic statistical methods?</a></h2>
-                <div class="summary"><p>What is the curse of dimensionality and how does it happen in the classic machine learning models?</p>
-                    <a class="btn btn-default btn-xs" href="/how-the-curse-of-dimensionality-kills-classic-statistical-methods.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-
+<div id="tipue_search_content"></div>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -133,5 +122,16 @@ Cecilia's Wonderland            </a>
 
 
 
+    <script src="/tipuesearch_content.js"></script>
+    <script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch({
+        'show': 10,
+        'newWindow': false
+      });
+    });
+    </script>
 </body>
 </html>
