@@ -23,7 +23,7 @@ AUTHOR_FEED_RSS = None
 GITHUB_URL = 'http://github.com/mcx2576s'
 
 # Add the search function
-DIRECT_TEMPLATES = ('index', 'categories', 'authors','archives', 'search')
+# DIRECT_TEMPLATES = ('index', 'categories', 'authors','archives', 'search')
 
 # Social widget
 SOCIAL = (('github', 'http://github.com/mcx2576'),
